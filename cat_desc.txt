@@ -1,0 +1,29 @@
+detUID       19A                     Unique detection ID   
+souUID       12A                     Unique source ID
+detNUM       I*8                      detUID coded as integer (TBD) 3)                        
+souNUM       I*4                      souUID coded as integer (TBD) 3)
+IAUNAM       15A                     IAU source name 8 digits RA + 7 digits DEC, (Prefix not included), should be the same one for each souUID   
+UNIQUE       I*1                      1 if source is in non-overlapping area of sky map,0 otherwise (always 1 for pointings)
+QUALITY      I*1                      quality number, higher is better (?)
+RA           R*8   [deg]              Right ascension 
+DEC          R*8   [deg]              Declination
+RADEC_ERR    R*4   [sec]              1 sigma error
+LII          R*8   [deg]              Galactic longitude
+BII          R*8   [deg]              Galactic latitude
+POSERR       R*4   [sec]              Position error including systematic error
+SYSERR       R*4   [sec]              Sytematic component of position error
+DIST_NN      R*4   [sec]              Distance to nearest neighbour     
+EXT          R*4   [sec]              Source extent
+EXT_ERR      R*4   [sec]              1 sigma error
+EXT_LIKE     R*4                      Extent likelihood 1)
+tb_SCTS      R*4   [counts]           Source counts 2)
+tb_SCTS_ERR  R*4   [counts]           1 sigma error 2)
+tb_RATE      R*4   [counts/sec]       Vignetting corrected source count rate 2) 
+tb_RATE_ERR  R*4   [counts/sec]       1 sigma error 2) 
+tb_FLUX      R*4   [cgs]              Source flux 2)
+tb_FLUX_ERR  R*4   [cgs]              1 sigma error 2)
+tb_DET_LIKE  R*4                      Detection likelihood 1) 2)
+tb_BG_MAP    R*4   [counts/pixel]     Background at source location 2) 
+tb_EXP_MAP   R*4   [sec]              Vignetting corrected exposure at source location 2) 
+tb_VIG       R*4                      Average vignetting factor at source location 2)
+class        I*4                      HEASARC class http://heasarc.gsfc.nasa.gov/W3Browse/class_help.html

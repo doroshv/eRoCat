@@ -1,0 +1,4 @@
+Auxiliary tools to help with creation of input catalogues for eRosita mission.
+some usage examples are included. Those require also PyHeasarc module
+(https://github.com/doroshv/PyHeasarc) to work. Please contact author for help
+if necessary.
